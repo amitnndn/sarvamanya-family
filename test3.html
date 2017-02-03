@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html amp>
+<head>
+	<title></title>
+	<script async src="https://cdn.ampproject.org/v0.js"></script>
+	<script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+	<script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script> 
+	<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+	<script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+	<script async custom-element="amp-user-notification" src="https://cdn.ampproject.org/v0/amp-user-notification-0.1.js"></script>
+	<script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+	<script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>
+	
+	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+	<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+	<style>
+		.carousel .slide > amp-img > img {
+			object-fit: contain;
+		}
+		.menu_bar {
+			float: left;
+			margin: 20pt;
+			background-position: left 16px center;
+			background-repeat: no-repeat;
+			background-image: -webkit-image-set(
+				url(/menu_wide_services_amp.png) 1x,
+				url(menu_wide_services_amp.png) 2x
+				);
+			background-color: #f4f4f4;
+			text-align: left;
+			padding: 16px;
+			background-size: 30pt;
+		}
+		.logo > a {
+			float: left;
+			font-size: 16px;
+			font-weight: 500;
+			color: white;
+			text-transform: uppercase;
+		}
+		.heading {
+			padding-bottom: 8px;
+		}
+		.heading > #summary {
+			font-weight: 500;
+		}
+		.heading > small {
+			color: #656565;
+		}
+		.related {
+			background-color: #f5f5f5;
+			margin: 16px 16px;
+			display: block;
+			color: #111;
+			height: 75px;
+			padding: 0;
+		}
+		.related > span {
+			font-size: 16px;
+			line-height: 75px;
+			font-weight: 400;
+			vertical-align: top;
+			margin: 8px;
+		}
+		.related:hover {
+			background-color: #ccc;
+		}
+		amp-user-notification {
+			padding: 8px;
+			background: #bbb;
+			text-align: center;
+			color: white;
+		}
+		amp-sidebar {
+			width: 250px;
+			padding-right: 10px;
+		}
+		.amp-sidebar-image {
+			line-height: 100px;
+			vertical-align:middle;
+		}
+		.amp-close-image {
+			top: 15px;
+			left: 225px;
+			cursor: pointer;
+		}
+		li {
+			margin-bottom: 20px;
+			list-style: none;
+		}
+		amp-sidebar {
+			width: 250px;
+			padding-right: 10px;
+		}
+		.amp-sidebar-image {
+			line-height: 100px;
+			vertical-align:middle;
+		}
+		.amp-close-image {
+			top: 15px;
+			left: 225px;
+			cursor: pointer;
+		}
+		li {
+			margin-bottom: 20px;
+			list-style: none;
+		}
+		.carousel .slide > amp-img > img {
+			object-fit: contain;
+		}
+
+		p { padding:5%;
+		}
+		h1{ 
+			padding:5%;
+			margin-bottom: 0pt;
+		}
+		h4 { padding:5%;
+		}
+		ul { padding:10%;
+		}
+		.logo {
+			float: left;
+			margin: 5pt;
+			background-position: left 16px center;
+			background-repeat: no-repeat;
+			background: url(https://wideservices.gr/images/logos/New-Logo-Wide-solutions2.png) 50% 50% no-repeat !important;
+			height: 75px;
+			background-color: #f4f4f4 !important;
+		}
+		.logo > a {
+			font-size: 16px;
+			font-weight: 500;
+			color: white;
+			text-transform: uppercase;
+		}
+		.heading {
+			padding-bottom: 8px;
+		}
+		.heading > #summary {
+			font-weight: 500;
+		}
+		.heading > small {
+			color: #656565;
+		}
+		.related {
+			background-color: #f5f5f5;
+			margin: 16px 16px;
+			display: block;
+			color: #111;
+			height: 75px;
+			padding: 0;
+		}
+		.related > span {
+			font-size: 16px;
+			line-height: 75px;
+			font-weight: 400;
+			vertical-align: top;
+			margin: 8px;
+		}
+		.related:hover {
+			background-color: #ccc;
+		}
+		amp-user-notification {
+			padding: 8px;
+			background: #bbb;
+			text-align: center;
+			color: white;
+		}
+		.clear{
+			clear: both;
+		}
+		#hero_image{
+			width: 100%;
+			z-index: 0;
+		}
+		.blog_author{
+			width: 100%;
+		}
+		.author_profile{
+			width: 100%;
+			margin-bottom: 10pt;
+		}
+		.author_image{
+			float: left;
+			width: 20%;
+			margin-left: 10pt;
+		}
+		.author_name{
+			float: left;
+			width: 70%;
+			margin-top: 10pt;
+			margin-left: 10pt;
+		}
+		.profile_image{
+			border-radius: 50%;
+			width: 75%;
+		}
+		.footer{
+			width: 100%;
+			background-color: #f4f4f4;
+		}
+		.footer_links{
+			color: #005a7f;
+			padding: 20pt;
+		}
+		.copyright{
+			color: #005a7f;
+			padding: 20pt;
+		}
+		.moodle_image{
+			float: right;
+		}
+		.moodle_image img{
+			width: 50%;
+			float: right;
+			padding-right: 20pt;
+			padding-bottom: 20pt;
+		}
+		.header{
+			width: 100%;
+			background-color: #f4f4f4;
+			padding-bottom: 10pt;
+			height: 75px;
+		}
+		.menu_bar{
+			width: 4%;
+		}
+		.logo{
+			width: 57%;
+			padding: 0pt;
+		}
+		.menu_bar:hover{
+			cursor: pointer;
+		}
+		a{
+			color: #005a7f;
+		}	
+		.related_articles h4, .related_articles p{
+			padding: 0pt !important;
+			padding-left: 5pt !important;			
+		}
+		.-amp-fill-content a{
+			padding: 5pt;
+			background-color: #ffffff;
+			border-top: solid 2px;
+			
+			border-color: grey;
+		}
+	</style>
+</head>
+<body>
+	<amp-sidebar id='sidebar'
+	layout="nodisplay"
+	side="left">
+	<amp-img class='amp-close-image'
+	src="https://ampbyexample.com//img/ic_close_black_18dp_2x.png"
+	width="20"
+	height="20"
+	alt="close sidebar"
+	on="tap:sidebar.close"
+	role="button"
+	tabindex="0"></amp-img>
+	<ul>
+		<li>
+			<a href="/">Home</a>
+		</li>
+		<li><a href="/">Latest News</a></li>
+		<li><a href="/">Contact Us</a></li>
+		<li><a href="/">Service &amp; Products</a></li>
+		<li><a href="/">Portfolio</a></li>
+		<li><a href="/">The Company</a></li>
+		<!-- <li>
+			<amp-fit-text width="220"
+			height="20"
+			layout="responsive"
+			max-font-size="24">
+			Nav item 2 - &lt;amp-fit-text&gt;
+		</amp-fit-text>
+	</li> -->
+	<!-- <li>
+		<amp-fit-text width="220"
+		height="20"
+		layout="responsive"
+		max-font-size="24">
+		Nav item 3 - &lt;amp-fit-text&gt; longer text
+	</amp-fit-text>
+</li> -->
+
+<!-- <li> Nav item 5</li>
+	<li> Nav item 6</li>-->
+</ul>
+</amp-sidebar>
+<div on='tap:sidebar.open' class="header" role=>
+	<div class="menu_bar"></div>
+	<div class="logo"></div>
+	<div class="clear"></div>
+	<a href="#"></a>
+</div>
+<div class="heading">
+	<h1>Παρουσίαση του Kodeproject</h1>
+	<div class="author_profile">
+		<div class="blog_author">
+			<div class="author_profile">
+				<div class="author_image">
+					<img class="profile_image" src="profile_image.jpg"/>
+				</div>
+				<div class="author_name">
+					By <a href="#"><strong>Random Guy</a></strong><br/>
+					<span class="post_date">
+						12th November, 2016
+					</span>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+	<amp-img amp-img-id="AMP_1" id="hero_image" class="-amp-fill-content -amp-replaced-content" src="https://wideservices.gr/images/kode/cover1.jpg">
+	<p id="summary">H WIDE Services συμμετείχε με υπερηφάνεια στην παρουσίαση του kodeproject.gr. Της 1η διαδικτυακής πλατφόρμας εκμάθησης κώδικά. Μία πρωτοβουλία του #Kotsovolos με τη συμβολή του BCA College και την ανάπτυξη &amp; υποστήριξη από την WIDE Services. μάθε/γράψε/ζήσε/....#kode #kodeproject</p>
+</div>
+<div class="moodle_image">
+	<amp-img src="https://wideservices.gr/images/mpartner.png">
+</div>
+<div class="clear"></div>
+<div class="related_articles">
+	<h4>Related Articles</h4>
+	<p>These articles might be interesting for you as well:</p>
+	<amp-list width=300
+	height=75
+	layout=responsive
+	src="/json/related_articles.json">
+	<template type="amp-mustache">
+		<a class="card related"
+		href={{url}}>
+		<amp-img width="101"
+		height="75"
+		src="{{thumbnail}}"></amp-img>
+		<span>{{title}}</span>
+		<span>Some text</span>
+	</a>
+</template>
+</amp-list>
+</div>
+<div class="clear"></div>
+<div class="footer">
+	<div class="footer_links">
+		<div class="link">Help and Contact Us</div>
+		<div class="link">Terms of Service</div>
+	</div>
+	<div class="copyright">&copy; WIDE Services </div>
+</div>
+</body>
+</html>
