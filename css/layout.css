@@ -1,0 +1,119 @@
+body{
+	font-family: 'Open Sans', sans-serif;
+	max-width: 960px;
+	margin: 0 auto;
+}
+header{
+	top: 0;
+	left: 0;
+	z-index: 99;
+	height: 75px;
+	background-color: #C9BEB6;
+	position: fixed;	
+	width: 100%;
+	text-align: center;
+}
+.title{
+	margin: 0 auto;
+	width: 85%;
+	padding: 3px;
+}
+.content{
+	margin: auto;
+	width: 90%;
+	margin-top: 80px;
+}
+#nav{						
+	margin: 0 auto;
+	width: 90%;
+}
+ul#nav ul {
+	display: none;
+	margin-top: 5px;
+}
+ul,li{
+	margin-top: 5px;
+}
+
+.info {
+	font-size: 12px;
+}
+
+li {
+	list-style: none;
+}
+
+.clear {
+	clear: left;
+}
+
+.insideLi {
+	float: left;
+	border: solid 1px;
+	text-align: center;
+	padding: 2px;
+	border-radius: 5px;
+	margin-left: 5px;
+}
+
+#family_tree {
+	margin: 0 auto;
+}
+#nav2{
+	display: none;
+}
+.birthdays, .anniversaries, .memorials{
+	width: 30%;			
+	border: solid 1px;	
+	border-radius: 5px;
+	margin: 2pt;
+	padding: 2pt;
+	text-align: center;
+	display: inline-block;
+	vertical-align: top;
+}
+small{
+	text-align: left !important;
+}
+img{
+	border-radius: 50%;
+}
+h2{
+	margin: 0 auto;
+}
+.profile_image{
+	overflow: hidden;
+}
+.menu_items ul{
+	padding-left: 0pt;
+}
+.menu_items li{
+	display: inline;
+	border-right: 1px solid #000000;
+	padding: 5pt;
+}
+.menu_items li:last-child{
+	border-right: none;
+}
+.important_dates{
+	text-align: center;
+	width: 90%;
+	margin: 0 auto;
+}
+.nothing_to_show{
+	display: block;
+}
+hr{
+	width: 85%;
+	margin-top: 20pt;
+	margin-bottom: 10pt;
+}
+footer{
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	width: 100%;
+}
+#nav2 li > ul .child{
+	display: block !important;
+}
