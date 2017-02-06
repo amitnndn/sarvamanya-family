@@ -131,7 +131,7 @@
 		$(function() {
 			var familyData = new Object();
 			var currentBirthdays = new Object();
-			$.getJSON("/document.json",function(data){
+			$.getJSON("document.json",function(data){
 				familyData = data;
 				prepareData(familyData);		
 			});
